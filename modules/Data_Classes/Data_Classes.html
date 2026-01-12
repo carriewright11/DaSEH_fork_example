@@ -433,7 +433,7 @@ a - b</pre>
   read_csv(&quot;https://daseh.org/data/SARS-CoV-2_Wastewater_Data.csv&quot;) 
  
 # Selecting a few columns for easy viewing
-sars_ww &lt;- sars_ww %&gt;% select(town_name, date_start)</pre>
+sars_ww &lt;- sars_ww |&gt; select(town_name, date_start)</pre>
 
 </article></slide><slide class=""><hgroup><h2>Class conversion in a dataset</h2></hgroup><article  id="class-conversion-in-a-dataset-1">
 
@@ -460,7 +460,7 @@ sars_ww &lt;- sars_ww %&gt;% select(town_name, date_start)</pre>
 
 <p>We would need to use <code>mutate()</code> to help us modify that column.</p>
 
-<pre class = 'prettyprint lang-r'>sars_ww %&gt;% 
+<pre class = 'prettyprint lang-r'>sars_ww |&gt; 
   mutate(date_start_fixed = mdy(date_start))</pre>
 
 <pre >## # A tibble: 2,813 × 3
